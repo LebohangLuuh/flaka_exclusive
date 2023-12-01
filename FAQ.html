@@ -14,7 +14,6 @@
         width: 100%; 
     }
 </style>
-<link rel="stylesheet" href="gallery.css">
 <link rel="stylesheet" href="navlink.css">
 
 </head>
@@ -30,10 +29,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav m-sm-auto" >
         <li class="nav-item ">
-          <a class="nav-link " href="index.html">Home </a>
+          <a class="nav-link "  href="index.html">Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" style="color: #efc8b1;" href="menu.html">Menu</a>
+          <a class="nav-link" href="menu.html">Menu</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
@@ -41,7 +40,7 @@
             <a class="nav-link" href="experience.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="FAQ.html">FAQ's</a>
+            <a class="nav-link active" style="color: #efc8b1;" href="FAQ.html">FAQ's</a>
           </li>
         </li>
         <li class="nav-item">
@@ -51,129 +50,46 @@
     </div>
   </nav>
 
-  <!-- menu -->
-    <h1 class="display-3 text-center mt-5 pl-5 m-0" style="color: #8a6626; background-color: #efc8b1; padding-bottom: 10px;">MENU</h1>
+<!--  -->
+<h1 class="display-3 text-center mt-5 pl-5 m-0" style="color: #8a6626; background-color: #efc8b1; padding-bottom: 10px;">Frequently Asked Questions</h1>
 
+<div class="bg-background">
+    <div class="container mb-5 ">
+        <div class="row py-3 mt-5">
+            <div class="col-md-8 first_col mb-5">
 
-    <div class="gallery">
-      <ul class="controls">
-        <li class="buttons" data-filter="sandwich">BURGERS</li>
-        <li class="buttons" data-filter="ice-cream">FOOD</li>
-        <li class="buttons" data-filter="chocolate">DRINKS </li>
-        <li class="buttons" data-filter="cake">DESSERT</li>
-      </ul>
+  <div class="accordion" id="accordionExample">
 
-  <div class="image-container">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <h2>01</h2>
+          <h3>What are your trading hours?</h3>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>
+            Sun - Thur 10:00 - 20:00 <br />
+            Fri - Sat 10:00 - 21:00
+          </p>
+        </div>
+      </div>
+    </div>
 
-      <a href="#" class="image ice-cream">
-          <img src="IMAGES/food.png" alt="">
-      </a>
-      <a href="#" class="image ice-cream">
-          <img src="IMAGES/food.png" alt="">
-      </a>
-      <a href="#" class="image ice-cream">
-        <img src="IMAGES/food.png" alt="">
-      </a>
-
-      <a href="#" class="image chocolate">
-        <img src="IMAGES/drink.png" alt="">
-          </a>
-      <a href="#" class="image chocolate">
-        <img src="IMAGES/drink.png" alt="">
-          </a>
-
-      <a href="#" class="image cake">
-        <img src="IMAGES/desert.png" alt="">
-      </a>
-      <a href="#" class="image cake">
-        <img src="IMAGES/desert.png" alt="">
-      </a>
-      <a href="#" class="image cake">
-        <img src="IMAGES/desert.png" alt="">
-      </a>
-      <a href="#" class="image cake">
-        <img src="IMAGES/desert.png" alt="">
-      </a>
-      <a href="#" class="image sandwich">
-        <img src="IMAGES/BURGER.png" alt="">
-    </a>
-      <a href="#" class="image ice-cream">
-        <img src="IMAGES/food.png" alt="">
-    </a>
-    <a href="#" class="image sandwich">
-        <img src="IMAGES/BURGER.png" alt="">
-    </a>
-    <a href="#" class="image ice-cream">
-        <img src="IMAGES/food.png" alt="">
-    </a>
-
-    <a href="#" class="image chocolate">
-        <img src="IMAGES/drink.png" alt="">
-    </a>
-    <a href="#" class="image chocolate">
-        <img src="IMAGES/drink.png" alt="">
-    </a>
-    <a href="#" class="image sandwich">
-        <img src="IMAGES/BURGER.png" alt="">
-    </a>
-
-    <a href="#" class="image cake">
-        <img src="IMAGES/desert.png" alt="">
-    </a>
-    <a href="#" class="image sandwich">
-        <img src="IMAGES/BURGER.png" alt="">
-    </a>
-    <a href="#" class="image cake">
-        <img src="IMAGES/desert.png" alt="">
-    </a>
-    <a href="#" class="image sandwich">
-        <img src="IMAGES/BURGER.png" alt="">
-    </a>
+    <!-- Repeat the above structure for other FAQ items -->
+    
   </div>
 
-</div>
-
-
-<!-- jquery cdn link  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- magnific popup js cdn link  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-<script>
-
-$(document).ready(function(){
-
-  $('.buttons').click(function(){
-
-      $(this).addClass('active').siblings().removeClass('active');
-
-      var filter = $(this).attr('data-filter')
-
-      if(filter == 'all'){
-          $('.image').show(400);
-      }else{
-          $('.image').not('.'+filter).hide(200);
-          $('.image').filter('.'+filter).show(400);
-      }
-
-  });
-
-  $('.gallery').magnificPopup({
-
-      delegate:'a',
-      type:'image',
-      gallery:{
-          enabled:true
-      }
-
-  });
-
-});
-
-</script>
-
-
+            </div>
+            <div class="col-md-4 sec_col " style="z-index: -1;">
+                <img src="IMAGES/Qs.png"
+                    class="img-fluid" style="height: 500px;">
+            </div>
+        </div>
+    </div>
+  </div>
+ 
 <!-- FOOTER -->
 <div class="jumbotron-fluid pt-0">
     <div class="container-fluid" style="background-color: #efc8b1; width: 100%; height:max-content;">
