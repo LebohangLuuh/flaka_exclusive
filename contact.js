@@ -22,3 +22,11 @@ function validateForm() {
     return re.test(email);
   }
   
+  // gallery
+
+  lightbox.option({
+    resizeDuration: 200,
+    wrapAround: true,
+    disableScrolling: true,
+  });
+  
